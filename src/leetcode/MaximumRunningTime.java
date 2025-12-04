@@ -21,8 +21,8 @@ public class MaximumRunningTime {
 
             if (canRun(mid, batteries, n))
                 low = mid;
-                else
-                    high = mid - 1;
+            else
+                high = mid - 1;
         }
         return low;
     }
