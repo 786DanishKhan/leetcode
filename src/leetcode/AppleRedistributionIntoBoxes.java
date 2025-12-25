@@ -1,6 +1,8 @@
 package leetcode;
 
 
+import java.util.Arrays;
+
 public class AppleRedistributionIntoBoxes {
     public static void main(String[] args) {
         int[] apple = {1, 3, 2};
@@ -14,12 +16,15 @@ public class AppleRedistributionIntoBoxes {
         for (int a : apple) {
             totalApples = totalApples + a;
         }
+
+        Arrays.sort(capacity);
+        
         int boxes = 0;
         for (int i = capacity.length - 1; i >= 0 && totalApples > 0; i--) {
             totalApples = totalApples - capacity[i];
             boxes++;
         }
-        return totalApples <= 0 ? boxes : -1;
+        return boxes;
 
     }
 }
