@@ -18,7 +18,7 @@ public class AppleRedistributionIntoBoxes {
         }
 
         Arrays.sort(capacity);
-        
+
         int boxes = 0;
         for (int i = capacity.length - 1; i >= 0 && totalApples > 0; i--) {
             totalApples = totalApples - capacity[i];
